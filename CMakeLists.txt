@@ -1,0 +1,11 @@
+cmake_minimum_required(VERSION 3.13)
+include($ENV{HOME}/pico-sdk/external/pico_sdk_import.cmake)
+project(bootsel_keyboard C CXX ASM)
+pico_sdk_init()
+
+add_executable(bootsel_keyboard main.c)
+target_include_directories(bootsel_keyboard PRIVATE ${CMAKE_CURRENT_LIST_DIR})
+target_link_libraries(bootsel_keyboard pico_stdlib tinyusb_device tinyusb_board)
+pico_enable_stdio_usb(bootsel_keyboard 0)
+pico_enable_stdio_uart(bootsel_keyboard 0)
+pico_add_extra_outputs(bootsel_keyboard)

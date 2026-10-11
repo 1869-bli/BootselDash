@@ -1,2 +1,2 @@
 # BootselDash
-Custom firmware for the Raspberry Pi Pico that allows you to use the Bootsel button to play geometry dash
+The firmware makes the Bootsel button act as the spacebar which allows you to play Geometry Dash
